@@ -3926,7 +3926,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         The description of an asset, can be free form text or elements
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:any processContents='lax' minOccurs='0' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -3934,7 +3934,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:any>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='AssetsType'>
     <xs:annotation>
@@ -4105,7 +4105,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         The description of a data item, can be free form text or elements
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:any processContents='lax' minOccurs='0' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -4113,7 +4113,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:any>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:simpleType name='FilterValueType'>
     <xs:annotation>
@@ -4294,7 +4294,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
     <xs:annotation>
       <xs:documentation/>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='DataItem' type='DataItemType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -4303,7 +4303,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='DataItemType'>
     <xs:annotation>
@@ -4593,7 +4593,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         elements associated with this {{block(DataItem)}} element. 
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='Filter' type='DataItemFilterType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -4602,7 +4602,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='DataItemBaseType'>
     <xs:annotation>
@@ -4717,7 +4717,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         {{block(EntryDefinition)}} elements.
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='EntryDefinition' type='EntryDefinitionType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -4725,7 +4725,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:attributeGroup name='DefinitionAttrsType'>
     <xs:attribute name='key' type='KeyType' use='optional'>
@@ -4797,7 +4797,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         {{block(CellDefinition)}} elements.
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='CellDefinition' type='CellDefinitionType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -4805,7 +4805,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='CellDefinitionType'>
     <xs:annotation>
@@ -4831,9 +4831,9 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         Organizes DataItemRelationship and SpecificationRelationship
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element ref='AbstractDataItemRelationship' minOccurs='1' maxOccurs='unbounded'/>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='AbstractDataItemRelationshipType' abstract='true'>
     <xs:annotation>
@@ -5006,7 +5006,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         Structural Elements for MTConnectStreams
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='DeviceStream' type='DeviceStreamType' minOccurs='0' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -5017,7 +5017,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='DeviceStreamType'>
     <xs:annotation>
@@ -5028,7 +5028,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         {{block(MTConnectStreams)}} {{term(Response Document)}}.
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='ComponentStream' type='ComponentStreamType' minOccurs='0' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -5036,7 +5036,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
     <xs:attribute name='name' type='NameType' use='required'>
       <xs:annotation>
         <xs:documentation>
@@ -5131,9 +5131,9 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         model.
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element ref='Sample' minOccurs='1' maxOccurs='unbounded'/>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='EventsType'>
     <xs:annotation>
@@ -5142,9 +5142,9 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         elements. See {{sect(Event)}} for details on the {{block(Event)}} model.
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element ref='Event' minOccurs='1' maxOccurs='unbounded'/>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='ConditionListType'>
     <xs:annotation>
@@ -5152,9 +5152,9 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         A collection of conditions
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element ref='Condition' minOccurs='1' maxOccurs='unbounded'/>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:simpleType name='UnavailableValueType'>
     <xs:annotation>
@@ -12588,7 +12588,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         {{textit(Ref:ISO 13399)}}.
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:any processContents='lax' minOccurs='0' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -12596,7 +12596,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:any>
-    </xs:all>
+    </xs:sequence>
     <xs:attribute name='format' type='DefinitionFormatType' use='optional'>
       <xs:annotation>
         <xs:documentation>
@@ -12779,7 +12779,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name='CuttingToolLife' type='LifeType' minOccurs='0' maxOccurs='3'>
+      <xs:element name='CuttingToolLife' type='LifeType' minOccurs='0' maxOccurs='1'>
         <xs:annotation>
           <xs:documentation>
             The life of the cutting tool assembly
@@ -12823,13 +12823,13 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any processContents='strict' notNamespace='##targetNamespace' minOccurs='0' maxOccurs='unbounded'>
+      <!-- <xs:any processContents='strict' notNamespace='##targetNamespace' minOccurs='0' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
             Any additional properties
           </xs:documentation>
         </xs:annotation>
-      </xs:any>
+      </xs:any> -->
       <xs:element name='Measurements' type='AssemblyMeasurementsType' minOccurs='0' maxOccurs='1'>
         <xs:annotation>
           <xs:documentation>
@@ -12874,7 +12874,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name='ToolLife' type='LifeType' minOccurs='0' maxOccurs='3'>
+      <xs:element name='ToolLife' type='LifeType' minOccurs='0' maxOccurs='1'>
         <xs:annotation>
           <xs:documentation>
             The cutting tool life as related to the assembly.
@@ -12925,13 +12925,13 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any processContents='strict' notNamespace='##targetNamespace' minOccurs='0' maxOccurs='unbounded'>
+      <!-- <xs:any processContents='strict' notNamespace='##targetNamespace' minOccurs='0' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
             Any additional properties
           </xs:documentation>
         </xs:annotation>
-      </xs:any>
+      </xs:any> -->
       <xs:element name='Measurements' type='AssemblyMeasurementsType' minOccurs='0' maxOccurs='1'>
         <xs:annotation>
           <xs:documentation>
@@ -12980,7 +12980,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         set of {{block(Status)}} elements.
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='Status' type='CutterStatusValueType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -12988,7 +12988,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='LocationType'>
     <xs:annotation>
@@ -13932,7 +13932,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         elements.
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='CuttingItem' type='CuttingItemType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -13941,7 +13941,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
     <xs:attribute name='count' type='EdgeCountType' use='required'>
       <xs:annotation>
         <xs:documentation>
@@ -13981,7 +13981,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name='ItemLife' type='LifeType' minOccurs='0' maxOccurs='3'>
+      <xs:element name='ItemLife' type='LifeType' minOccurs='0' maxOccurs='1'>
         <xs:annotation>
           <xs:documentation>
             The life of a {{block(CuttingItem)}}.
@@ -13995,13 +13995,13 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any processContents='strict' notNamespace='##targetNamespace' minOccurs='0' maxOccurs='unbounded'>
+      <!-- <xs:any processContents='strict' notNamespace='##targetNamespace' minOccurs='0' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
             Any additional properties
           </xs:documentation>
         </xs:annotation>
-      </xs:any>
+      </xs:any> -->
       <xs:element name='Measurements' type='CuttingItemMeasurementsType' minOccurs='0' maxOccurs='1'>
         <xs:annotation>
           <xs:documentation>
@@ -14234,7 +14234,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base='AssetType'>
-        <xs:all>
+        <xs:sequence>
           <xs:element name='FileProperties' type='FilePropertiesType' minOccurs='0' maxOccurs='1'>
             <xs:annotation>
               <xs:documentation>
@@ -14251,7 +14251,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
               </xs:documentation>
             </xs:annotation>
           </xs:element>
-        </xs:all>
+        </xs:sequence>
         <xs:attribute name='name' type='FileNameType' use='required'>
           <xs:annotation>
             <xs:documentation>
@@ -14318,7 +14318,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         {{block(FileProperty)}} entities for {{block(File)}}s. 
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='FileProperty' type='FilePropertyType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -14327,7 +14327,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:simpleType name='FilePropertyValueType'>
     <xs:annotation>
@@ -14418,7 +14418,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base='AbstractFileType'>
-        <xs:all>
+        <xs:sequence>
           <xs:element name='FileLocation' type='FileLocationType'>
             <xs:annotation>
               <xs:documentation>
@@ -14464,7 +14464,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
               </xs:documentation>
             </xs:annotation>
           </xs:element>
-        </xs:all>
+        </xs:sequence>
         <xs:attribute name='size' type='FileSizeType' use='required'>
           <xs:annotation>
             <xs:documentation>
@@ -14537,7 +14537,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         Organizes file destinations
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='Destination' type='FileDestinationType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -14546,7 +14546,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name='FileDestinationType'>
     <xs:annotation>
@@ -14565,7 +14565,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
         {{block(FileComment)}} entities for {{block(File)}}s. 
       </xs:documentation>
     </xs:annotation>
-    <xs:all>
+    <xs:sequence>
       <xs:element name='FileComment' type='FileCommentType' minOccurs='1' maxOccurs='unbounded'>
         <xs:annotation>
           <xs:documentation>
@@ -14574,7 +14574,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    </xs:all>
+    </xs:sequence>
   </xs:complexType>
   <xs:simpleType name='CommentTextType'>
     <xs:annotation>
