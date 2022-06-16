@@ -4734,13 +4734,13 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
               </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:any processContents='strict' notNamespace='##targetNamespace' minOccurs='0' maxOccurs='unbounded'>
+          <!-- <xs:any processContents='strict' notNamespace='##targetNamespace' minOccurs='0' maxOccurs='unbounded'>
             <xs:annotation>
               <xs:documentation>
                 A placeholder for an XML element.
               </xs:documentation>
             </xs:annotation>
-          </xs:any>
+          </xs:any> -->
           <xs:element name='Channels' type='ChannelsType' minOccurs='0' maxOccurs='1'>
             <xs:annotation>
               <xs:documentation>
@@ -5441,7 +5441,7 @@ SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name='InitialValue' type='DataItemNumericValueType' minOccurs='0' maxOccurs='1'>
+      <xs:element name='InitialValue' type='DataItemValueType' minOccurs='0' maxOccurs='1'>
         <xs:annotation>
           <xs:documentation>
             initialvalue is an optional XML element that defines the starting
